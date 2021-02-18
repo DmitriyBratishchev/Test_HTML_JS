@@ -7,7 +7,8 @@
   const reg = [];
   openStr.forEach((elem) => reg.push(`${openStr[openStr.indexOf(elem)]}` + `${closeStr[openStr.indexOf(elem)]}`));
 
-  let n = 30;
+  let n = 5;
+  let sumOpen = 0;
   let result = '';
   generator(n);
 
@@ -15,7 +16,8 @@
     
 
     for (let i = 0; i < n*2; i++) {
-      if(i < n){
+
+      if ( sumOpen < n ) {
         result += (randomNam(0,1)) ? openFn() : closeFn(i);  
       } else {
         result += closeFn(i)
@@ -46,6 +48,8 @@
   }
 
   function openFn() {
+    sumOpen++ ;
+    console.log('s=', sumOpen);
     return openStr[randomNam(0, openStr.length - 1)];
   }
 
