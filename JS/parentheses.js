@@ -7,19 +7,25 @@
   const reg = [];
   openStr.forEach((elem) => reg.push(`${openStr[openStr.indexOf(elem)]}` + `${closeStr[openStr.indexOf(elem)]}`));
 
-  let n = 10;
+  let n = 30;
   let result = '';
+  generator(n);
 
-  for (let i = 0; i < n*2; i++) {
-    if(i < n){
-      result += (randomNam(0,1)) ? openFn() : closeFn(i);  
-    } else {
-      result += closeFn(i)
+  function generator(n) {
+    
+
+    for (let i = 0; i < n*2; i++) {
+      if(i < n){
+        result += (randomNam(0,1)) ? openFn() : closeFn(i);  
+      } else {
+        result += closeFn(i)
+      }
     }
+
+    console.log('result', result);
+    test();
   }
 
-  console.log('result', result);
-  test();
 
   function closeFn(i) {
 
