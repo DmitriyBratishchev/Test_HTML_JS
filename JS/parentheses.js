@@ -65,6 +65,9 @@
       }
       console.log('step ', s, prov);
     }
+    if (prov) {
+      console.log(`Строка ${result} не валидна, остаток ${prov}`);
+    }
   }
 
 })()
