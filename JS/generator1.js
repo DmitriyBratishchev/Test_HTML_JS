@@ -1,7 +1,7 @@
 import {randomNam} from './randomNam.js';
 import {openStr} from './service.js';
 import {closeStr} from './service.js';
-import {regularCouple} from './service.js';
+import {bracketCouple} from './service.js';
 
 let sumOpen = 0;
 let result = '';
@@ -28,7 +28,7 @@ function closeFn(i) {
   let prov = result;
 
   for (let s = 0; s < i; s++) {
-    regularCouple.forEach(elem => prov = prov.replace(elem, '')) ;
+    bracketCouple.forEach(elem => prov = prov.replace(elem, '')) ;
     if (!prov) {
       break
     }
