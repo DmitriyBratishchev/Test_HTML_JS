@@ -13,7 +13,7 @@ export function generator2(n) {
     result2 = result2.substring(0, position) + regularCouple[simbol] + result2.substr(position);
   }
 
-  console.log('result2', result2);
+  console.log('result2:  ', result2);
   return result2;
 }
 

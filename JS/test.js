@@ -9,7 +9,8 @@ export function test(result) {
     if (!prov) {
       console.log(`Проверка окончена, строка ${result} валидна.`);
       break
-    }
+    } 
+    
     
   }
   if (prov) {

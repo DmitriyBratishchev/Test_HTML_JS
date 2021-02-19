@@ -11,5 +11,6 @@ import {generator1} from './generator1.js';
 
   let result2 = generator2(n);
   test(result2);
+  
 
 })()
